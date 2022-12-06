@@ -3,6 +3,12 @@ public class Time {
     private int minute;
     private int second;
 
+    /**
+     * A constructor in the Time Class to create objects that starts with the initial time provided by the parameters.
+     * @param h an integer that represents the hour of the initial time
+     * @param m an integer that represents the minute of the initial time
+     * @param s an integer that represents the second of the initial time
+     */
     public Time(int h, int m, int s)
     {
         hour = h;
@@ -10,6 +16,9 @@ public class Time {
         second = s;
     }
 
+    /**
+     * A method in the Time Class that ticks the second hand of a clock by 1 each time
+     */
     public void tick()
     {
         second ++;
@@ -29,6 +38,10 @@ public class Time {
         }
     }
 
+    /**
+     * A method in the Time Class adds the time of two objects that's created in the Main Class.
+     * @param object an object created in the Main Class that is added to another object
+     */
     public void add(Time object)
     {
         this.second += object.second;
@@ -52,6 +65,10 @@ public class Time {
 
     }
 
+    /**
+     * A method in the Time Class that is used to return the current time.
+     * @return the time in the format of HH:MM:SS
+     */
     public String toString()
     {
         String h = Integer.toString(hour);;
